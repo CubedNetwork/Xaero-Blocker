@@ -1,4 +1,4 @@
-# Made by: @rcube.
+# Made by: rcubedev
 # Player fair play
 #
 # Called By: rcube:xaero_blocker/load, THIS
@@ -13,4 +13,4 @@ tellraw @a[tag=!xaero_blocker.done] "§x§a§e§r§o§w§m§n§e§t§h§e§r§i�
 tag @a[tag=!xaero_blocker.done] add xaero_blocker.done
 
 # Tick this function
-function rcube:xaero_blocker/tick
+schedule function rcube:xaero_blocker/tick 1t
