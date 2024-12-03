@@ -3,6 +3,12 @@
 #
 # Called By: rcube:xaero_blocker/load, THIS
 
+# Check login
+execute as @a[scores={rcube_xaeroBlocker.login=1..}] run tag @s add xaero_blocker.login
+scoreboard players set @a[tag=xaero_blocker.login] rcube_xaeroBlocker.login 0
+tag @a[tag=xaero_blocker.login,tag=xaero_blocker.done] remove xaero_blocker.done
+tag @a[tag=xaero_blocker.login] remove xaero_blocker.login
+
 # Set fair play mode
 tellraw @a[tag=!xaero_blocker.done] "§f§a§i§r§x§a§e§r§o"
 
